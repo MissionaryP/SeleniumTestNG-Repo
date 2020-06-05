@@ -15,7 +15,7 @@ public class HomePage extends BasePage {
 	@FindBy(css="input.InputBar__SearchInput-t6v2m1-1.iJaFAt")
 	private WebElement searchInput;
 	
-	@FindBy(css="input.InputBar__SearchButton-t6v2m1-2.jRChuZ")
+	@FindBy(css="button.InputBar__SearchButton-t6v2m1-2.jRChuZ")
 	private WebElement searchButton;
 	
 	public ArticlePage buscar(String busqueda) {

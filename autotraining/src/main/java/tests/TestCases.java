@@ -14,8 +14,7 @@ public class TestCases extends BaseTest {
 		ArticlePage articlePage = homeP.buscar("Heladera");
 		//Assert.assertEquals(articlePage.getPageTitle(), "Heladera");
 		articlePage.getPageTitle();
-		articlePage.selectAllBrands();
-		articlePage.selectBrand();
+		articlePage.verifyResultsList();
 		
 	}
 }
