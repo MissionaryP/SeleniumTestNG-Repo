@@ -30,7 +30,8 @@ public class MyDriver{
 			driver = new FirefoxDriver();
 			break;
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\juan.durante\\Desktop\\chromedriver.exe");
+			String cwd = System.getProperty("user.dir")+"/src/test/Resources/chromedriver.exe";
+			System.setProperty("webdriver.chrome.driver",cwd );
 			driver = new ChromeDriver();
 			break;
 		default:

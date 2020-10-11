@@ -1,8 +1,10 @@
 package pages;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public abstract class BasePage {
 	protected WebDriver driver;
@@ -26,5 +28,17 @@ public abstract class BasePage {
 		if (driver != null) {
 			driver.quit();
 		}
+	}
+	
+	public void sendKeys(WebElement element, String send) {
+		element.sendKeys(send);
+	}
+	
+	public void clickElement(WebElement element) {
+		element.click();;
+	}
+	
+	public void verifyNull(WebElement object) {
+		Assert.assertNull(object);
 	}
 }

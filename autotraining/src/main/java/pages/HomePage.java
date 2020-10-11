@@ -9,19 +9,18 @@ public class HomePage extends BasePage {
 	
 	public HomePage(WebDriver driver) {
 		super(driver);
-		driver.get("http://www.fravega.com");
+		driver.get("http://www.amazon.com");
 	}
 	
-	@FindBy(css="input.InputBar__SearchInput-t6v2m1-1.iJaFAt")
+	@FindBy(id="twotabsearchtextbox")
 	private WebElement searchInput;
 	
-	@FindBy(css="button.InputBar__SearchButton-t6v2m1-2.jRChuZ")
+	@FindBy(id="nav-search-submit-text")
 	private WebElement searchButton;
 	
 	public ArticlePage buscar(String busqueda) {
-		searchInput.sendKeys(busqueda);
-		getWait().until(ExpectedConditions.elementToBeClickable(searchButton));
-		searchButton.click();
+		sendKeys(searchInput,busqueda);
+		clickElement(searchButton);
 		return new ArticlePage(getDriver());
 	}
 }

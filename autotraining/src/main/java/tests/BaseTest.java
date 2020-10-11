@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -29,4 +30,10 @@ public class BaseTest {
 	public HomePage getHomePage() {
 		return homeP;
 	}
+	
+	public WebDriver returnDriver() {
+		return myDriver.getDriver();
+	}
+	
+	
 }

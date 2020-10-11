@@ -11,10 +11,8 @@ public class TestCases extends BaseTest {
 	@Test
 	public void searchAction() {
 		HomePage homeP = getHomePage();
-		ArticlePage articlePage = homeP.buscar("Heladera");
-		//Assert.assertEquals(articlePage.getPageTitle(), "Heladera");
-		articlePage.getPageTitle();
-		articlePage.verifyResultsList();
+		ArticlePage articlePage = homeP.buscar("Alexia");
+		articlePage.validateAddToKart();
 		
 	}
 }
